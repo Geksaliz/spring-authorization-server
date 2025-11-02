@@ -1,0 +1,30 @@
+server:
+  port: 8090
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/spring-authorization-server
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: postgres
+    pool:
+      enabled: true
+      initial-size: 10
+      max-idle-time: 1m
+      max-size: 30
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+clients:
+  taco-client:
+    client-id: "taco-client"
+    client-secret: "07ac2000-b6c2-4b20-b1d3-2753a62e1be2"
+    redirect-uri: "http://127.0.0.1:8080/login/oauth2/code/taco-client"
+    post-logout-redirect-uri: "http://127.0.0.1:8080/"
+    scopes: writeIngredients,deleteIngredients
+
+cors:
+  origin:
+    patterns: http://localhost*

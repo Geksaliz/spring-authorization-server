@@ -1,0 +1,9 @@
+package authorization.configuration
+
+import authorization.configuration.properties.ClientsProperties
+import org.springframework.boot.context.properties.EnableConfigurationProperties
+import org.springframework.context.annotation.Configuration
+
+@Configuration
+@EnableConfigurationProperties(ClientsProperties::class)
+class PropertiesConfiguration
