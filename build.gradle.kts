@@ -5,8 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.plugin.spring") version "2.2.21"
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
