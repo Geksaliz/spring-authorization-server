@@ -83,6 +83,7 @@ class SecurityConfiguration {
     @Order(1)
     fun authorizationServerSecurityFilterChain(http: HttpSecurity): SecurityFilterChain {
         val authorizationServerConfigurer = OAuth2AuthorizationServerConfigurer()
+            .oidc(Customizer.withDefaults())
 
         http
             .securityMatcher(authorizationServerConfigurer.endpointsMatcher)
