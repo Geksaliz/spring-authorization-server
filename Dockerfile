@@ -1,4 +1,4 @@
-FROM openjdk:24-slim
+FROM eclipse-temurin:24
 
 COPY build/libs/spring-authorization-server-1.0.jar app.jar
 
